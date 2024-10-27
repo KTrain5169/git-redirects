@@ -9,6 +9,7 @@ function redirectToCorrectPath() {
         '/unpacker': ['/unpacker'],
         '/python-template': ['/python-template', '/template', '/python-template-repo'],
         '/catpack-crafter': ['/catpacks', '/catpack', '/catpack-crafter'],
+        '/source': ['/git-redirects', '/source', '/site-source', '/redirect', '/redirects', '/redirector'],
         // Add additional mappings as necessary
     };
 
