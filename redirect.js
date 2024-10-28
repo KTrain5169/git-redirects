@@ -10,6 +10,7 @@ function redirectToCorrectPath() {
         '/python-template': ['/python-template', '/template', '/python-template-repo'],
         '/catpack-crafter': ['/catpacks', '/catpack', '/catpack-crafter'],
         '/source': ['/git-redirects', '/source', '/site-source', '/redirect', '/redirects', '/redirector'],
+        '/programming-dictionary': ['/programming', '/program-dictionary', '/programming-dict', '/dict', '/program-dict', '/dictionary'],
         // Add additional mappings as necessary
     };
 
