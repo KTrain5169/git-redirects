@@ -1,8 +1,7 @@
-// redirect.js
 function redirectToCorrectPath() {
-    const currentPath = window.location.pathname.toLowerCase(); // Convert current path to lower case
+    // Get the current path and remove any trailing slash, then make lowercase
+    const currentPath = window.location.pathname.replace(/\/$/, '').toLowerCase();
 
-    // Define the correct paths (case-sensitive)
     const pathMappings = {
         '/translator': ['/translator'],
         '/ktools2202': ['/ktools2202'],
@@ -14,17 +13,14 @@ function redirectToCorrectPath() {
         // Add additional mappings as necessary
     };
 
-    // Check for a match with any defined paths
+    // Loop through each correct path and check if the current path matches any allowed path
     for (const correctPath in pathMappings) {
-        const allowedPaths = pathMappings[correctPath];
-
-        // Check if the current path matches any of the allowed paths (case-insensitive)
-        if (allowedPaths.some(path => path.toLowerCase() === currentPath)) {
+        const allowedPaths = pathMappings[correctPath].map(path => path.toLowerCase().replace(/\/$/, ''));
+        if (allowedPaths.includes(currentPath)) {
             window.location.replace(correctPath);
             return;
         }
     }
 }
 
-// Call the redirect function
 redirectToCorrectPath();

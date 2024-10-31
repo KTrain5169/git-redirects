@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Redirecting...</title>
+    <script>
+        // Get the path and remove any trailing slash
+        const path = window.location.pathname.replace(/\/$/, '');
+        
+        // Simple redirect map
+        const redirects = {
+            '/dict': '/programming-dictionary',
+            '/programming': '/programming-dictionary'
+        };
+
+        // Check if we have a redirect for this path
+        if (redirects[path]) {
+            window.location.replace(redirects[path]);
+        } else {
+            // If no redirect matches, go to homepage
+            window.location.replace('/');
+        }
+    </script>
+</head>
+<body>
+    <h1>Redirecting...</h1>
+</body>
+</html> 
