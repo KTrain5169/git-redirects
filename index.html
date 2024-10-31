@@ -1,31 +1,15 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>Your Site</title>
-    <script>
-        function redirectToCorrectPath() {
-            // Debug: Log the current path
-            const currentPath = window.location.pathname;
-            console.log('Current path:', currentPath);
-
-            // Simple test case
-            if (currentPath === '/dict') {
-                window.location.href = '/programming-dictionary/';
-                return;
-            }
-
-            if (currentPath === '/programming') {
-                window.location.href = '/programming-dictionary/';
-                return;
-            }
-        }
-
-        // Run when page loads
-        window.addEventListener('load', redirectToCorrectPath);
-    </script>
-</head>
-<body>
-    <h1>Redirect Test Page</h1>
-    <!-- Add some visible content to confirm the page loads -->
-</body>
+    <head>
+        <title>Redirecting to GitHub...</title>
+        <meta http-equiv="refresh" content="0;url=https://github.com/KTrain5169">
+        <script>
+            // Immediate redirect to GitHub
+            window.location.replace('https://github.com/KTrain5169');
+        </script>
+    </head>
+    <body>
+        <h1>Redirecting to GitHub...</h1>
+        <p>If you're not redirected automatically, <a href="https://github.com/KTrain5169">click here</a>.</p>
+    </body>
 </html>
