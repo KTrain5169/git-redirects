@@ -1,9 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta http-equiv="refresh" content="0; url=https://github.com/usevital/translator">
         <title>Redirecting...</title>
-        <script src="redirect.js?v=1"></script>
+        <script>
+            const baseUrl = 'https://github.com/usevital/translator';
+            const path = window.location.pathname;
+            
+            if (path.endsWith('/issues')) {
+                window.location.replace(baseUrl + '/issues');
+            } else if (path.endsWith('/pulls')) {
+                window.location.replace(baseUrl + '/pulls');
+            } else {
+                window.location.replace(baseUrl);
+            }
+        </script>
+        <meta http-equiv="refresh" content="0; url=https://github.com/usevital/translator">
     </head>
     <body>
         <p>If you are not redirected automatically, follow this <a href="https://github.com/usevital/translator">link to translator</a>.</p>
